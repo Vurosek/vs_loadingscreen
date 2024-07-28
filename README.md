@@ -4,7 +4,7 @@
 
 - Możliwość Dodania  Wideo Przez Link Youtube
 - Możliwość Dodania Audio Przez Link Youtube
-- Możliwość Dodania Logo Przez Link (Discor itp)
+- Możliwość Dodania Logo Przez Link (Discord itp)
 
   Pliki Są Przejrzyste oraz dokładnie opisane 
 
