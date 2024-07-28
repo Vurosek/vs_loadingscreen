@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    cursor: none; 
+}
+
+#loading-screen {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    color: #fff;
+}
+
+#player {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none; 
+}
+
+#logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+#logo img {
+    width: 100%;
+    height: 100%;
+}
+
+#controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+
+#play-pause-btn {
+    margin-right: 10px;
+    padding: 10px 20px;
+    background: linear-gradient(to right, #003cff, #0084ff); /* Gradient tła przycisku */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+}
+
+#play-pause-btn:hover {
+    background: linear-gradient(to right, #003cff, #0084ff); /* Gradient tła przycisku przy najechaniu */
+}
+
+#volume-slider {
+    margin-right: 10px;
+    -webkit-appearance: none;
+    width: 200px;
+    height: 14px; /* Zwiększenie grubości paska */
+    background: linear-gradient(to right, #003cff, #0084ff);
+    border-radius: 4px; /* Zwiększenie zaokrąglenia */
+    outline: none;
+    opacity: 0.85;
+    transition: opacity .2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    border: 2px solid rgba(0, 1, 5, 0.801);  /* Obrys Suwaka */
+}
+
+#volume-slider:hover {
+    opacity: 1;
+}
+
+#volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px; /* Większy kursor */
+    height: 24px;
+    background: radial-gradient(circle, #ffffff, #e0e0e0); /* Gradient na kursorze */
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Mocniejszy cień */
+    transition: background-color 0.3s ease;
+}
+
+#volume-slider::-webkit-slider-thumb:hover {
+    background: radial-gradient(circle, #e0e0e0, #ffffff); /* Odwrócenie gradientu przy najechaniu */
+}
+
+#volume-slider::-moz-range-thumb {
+    width: 24px; /* Większy kursor */
+    height: 24px;
+    background: radial-gradient(circle, #ffffff, #e0e0e0); /* Gradient na kursorze */
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Mocniejszy cień */
+    transition: background-color 0.3s ease;
+}
+
+#volume-slider::-moz-range-thumb:hover {
+    background: radial-gradient(circle, #e0e0e0, #ffffff); /* Odwrócenie gradientu przy najechaniu */
+}
+
+#volume-label {
+    margin-left: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.link-icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin-left: 10px;
+    background: linear-gradient(to right, #003cff, #0084ff); /* Gradient tła kwadratów */
+    border-radius: 5px; /* Zaokrąglone krawędzie */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.link-icon img {
+    width: 60%;
+    height: 60%;
+}
+
+.link-icon:hover {
+    background: linear-gradient(to right, #003cff, #0084ff); /* Gradient tła kwadratów przy najechaniu */
+}
+
+#custom-cursor {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Ciemny kursor */
+    border: 2px solid #fff; /* Biały obwód */
+    border-radius: 50%; /* Okrągły kształt */
+    pointer-events: none; 
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
